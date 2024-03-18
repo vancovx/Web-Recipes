@@ -1,125 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
+    <head>
+      <title> Sugar Vault</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="styles/style1.css" >
+      <link rel="stylesheet" href="css/fontello.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+    </head>
 
-<head>
-  <title>Sugar Vault</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Evitar que se redimensione en moviles-->
-  <link rel="stylesheet" type="text/css" href="styles/style1.css" />
-  <link rel="stylesheet" href="css/fontello.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <a href="index.html"><img src="img/logo_oso.png" alt="Logo"></a>
+      <div class="titulos">
+        <h1 class="Titulo">The Sugar Vault</h1>
+        <h2 class="Subtitulo">Las recetas más dulces del mundo</h2>
+      </div>
+    </header>
 
-<body>
-  <header>
-    <a href="index.html"><img src="img/logo_oso.png" alt="Logo" /></a>
-    <div class="titulos">
-      <h1 class="Titulo">The Sugar Vault</h1>
-      <h2 class="Subtitulo">Las recetas más dulces del mundo</h2>
-    </div>
-  </header>
 
-  <!-- Barra de navegacion fuera del header-->
-  <nav>
-    <input type="checkbox" id="chkMenu" />
-    <!--Lo usamos para ocultar la barra de navegación-->
-    <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label>
-    <!--Relaciona el campo con el imput, como si estuviera pulsando el imput-->
-    <ul>
-      <!--List item-->
-      <!-- li*6>a[href="Paginas$.html"]{Página$}-->
-      <li>
-        <a href="index.html"><span class="icon-home"></span><span>Inicio</span></a>
-      </li>
-      <li>
-        <a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a>
-      </li>
-      <li>
-        <a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a>
-      </li>
-      <li>
-        <a href="index.html"><span class="icon-logout"></span><span>Logout</span></a>
-      </li>
-      <li>
-        <a href="login.html"><span class="icon-login"></span><span>Login</span></a>
-      </li>
-      <li>
-        <a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a>
-      </li>
-    </ul>
-  </nav>
+    <nav>
+      <input type="checkbox" id="chkMenu">
+      <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label>
+      <ul>
+        <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
+        <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
+        <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
+        <li><a href="index.html"><span class="icon-logout"></span><span>Logout</span></a></li>
+        <li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>
+        <li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>
+      </ul>
+    </nav>
 
-  <div class="Nueva">
-    <section>
-        <form name="datos">
-          <div class="Nueva_Receta">
-            <label for="name"> Nombre:</label>
-            <input type="text" name="nombre" id="name" placeholder="Gofres con fresas." autofocus />
-            <label for="tiempo"> Tiempo de elaboración (min):</label>
-            <input type="number" name="tiempo" id="tiempo" placeholder="90"  step="10" min="0" max="120"/>
-            <label for="personas"> Para cuantas personas es:</label>
-            <input type="number" name="personas" id="personas" placeholder="1-10" min="1" max="10"/>
-        
-            <label for="lista"> Dificultad:</label>
-            <select id="lista" name="dificultad">
-              <option value="Baja"> Baja</option>
-              <option value="Media"> Media</option>
-              <option value="Alta"> Alta</option>
-            </select>
-            <label for="ingre"> Ingredientes:</label>
-            <input type="text" name="ingredientes" id="ingre" placeholder="Escribe aquí el ingrediente." />
-            <div>
-              <button>Añadir</button>
-              <button>Eliminar</button>
-            </div>
+    <div class="Nueva">
+      <section>
+          <form name="datos">
+            <div class="Nueva_Receta">
+              <label for="name"> Nombre:</label>
+              <input type="text" name="nombre" id="name" placeholder="Gofres con fresas." autofocus maxlength="100" required>
+              <label for="tiempo"> Tiempo de elaboración (min):</label>
+              <input type="number" name="tiempo" id="tiempo" placeholder="90" min="1" required>
+              <label for="personas"> Para cuantas personas es:</label>
+              <input type="number" name="personas" id="personas" placeholder="1-10" min="1" max="10" required>
+          
+              <label for="lista"> Dificultad:</label>
+              <select id="lista" name="dificultad">
+                <option value="1-Baja"> Baja</option>
+                <option value="2-Media"> Media</option>
+                <option value="3-Alta"> Alta</option>
+              </select>
 
-            <label for="eti"> Etiquetas:</label>
-            <input type="text" name="etiquetas" id="eti" list="etiquetas" placeholder="Escribe aquí la etiqueta." />
-            <datalist id="etiquetas">
-              <option value="Dulce">
-              <option value="Desayuno">
-            </datalist>
+              <label for="ingre"> Ingredientes:</label>
+              <div>
+                <input type="text" name="ingredientes" id="ingre" placeholder="Escribe aquí el ingrediente.">
+                <button>+</button>
+              </div>
+              <div class="etiquetas">
+                <ul>
+                  <li>2 tazas de harina de trigo <button>x</button></li>
+                  <li>2 cucharadas de azúcar <button>x</button></li>
+                </ul>
+              </div>
+
+              <label for="eti"> Etiquetas:</label>
+              <div>
+                <input type="text" name="etiquetas" id="eti" list="etiquetas" placeholder="Escribe aquí la etiqueta.">
+                <datalist id="etiquetas">
+                  <option value="Dulce">
+                  <option value="Desayuno">
+                </datalist>
+                <button>+</button>
+              </div>
+              <div class="etiquetas">
+                <ul>
+                  <li>Gofres <button>x</button></li>
+                  <li>Postre <button>x</button></li>
+                </ul>
+              </div>
               
-            <div>
-              <button>Añadir</button>
-              <button>Eliminar</button>
+              
+              <label for="elaboración"> Elaboración:</label>
+              <textarea id="elaboración" name="descripcion" maxlength="300" rows="4" cols="50" placeholder="Escribe la elaboración de la receta" required></textarea>
             </div>
-            
-            <label for="elaboración"> Elaboración:</label>
-            <textarea id="elaboración" name="descripcion" maxlength="300" rows="4" cols="50" placeholder="Escribe la elaboración de la receta"></textarea>
-        
-          </div>
 
-          <div class="Fotos">
-            <h3 class="Secciones"> Fotos </h3>
-                <div>
-                  <button> Eliminar </button>
-                  <label for="foto" class="boton_imagen"> Subir imagen </label>
-                </div> 
-                <label for="foto"><img src="img/file.png" alt="Subir Imagen"></label>
-                <input type="file" id="foto" accept="image/jpeg,image/png">
-                <textarea name="descripcion" maxlength="300" rows="4" cols="50" placeholder="Escribe un comentario para la foto"></textarea>
-  
-          </div>
+            <div class="Fotos">
+              <h3 class="Secciones"> Fotos </h3>
+                  <div>
+                    <button> Eliminar </button>
+                    <label for="foto" class="boton_imagen"> Subir imagen </label>
+                  </div> 
+                  <label for="foto"><img src="img/file.png" alt="Subir Imagen"></label>
+                  <input type="file" id="foto" accept="image/jpeg,image/png">
+                  <div> <textarea name="descripcion" maxlength="300" rows="4" cols="50" placeholder="Escribe un comentario para la foto" required></textarea></div>
+            </div>
 
-          <div class="Añadir_Receta">
-            <input type="reset" value="Limpiar"/>
-            <input type="submit" value="Crear"/>
-          </div>
-        </form>
-    </section>    
-  </div>
+            <div class="Añadir_Receta">
+              <input type="reset" value="Limpiar">
+              <input type="submit" value="Crear">
+            </div>
 
-  <footer class="Pie">
-    <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
-    <p>Práctica 1</p>
-  </footer>
-</body>
+          </form>
+      </section>    
+    </div>
+
+    <footer class="Pie">
+      <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
+      <p>Práctica 1</p>
+    </footer>
+  </body>
 
 </html>

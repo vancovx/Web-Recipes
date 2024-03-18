@@ -54,9 +54,10 @@ header{
   border: 2px solid #841a16; 
   opacity: 0.5;
   border-radius: 5px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+
   > p {
-    display: inline-block;
     padding: 0px 20px 0px 2px;
   }
 
@@ -143,10 +144,16 @@ body > section{
         text-decoration: none;
         text-align: center;
         color:#6b3e26;
+        
         > h4 {
+          text-overflow: ellipsis; 
+          overflow: hidden;
+          white-space: nowrap;
           margin: 0;
           padding: 5px 0px;
+
           &:hover {
+            text-overflow: initial;
             transform: scale(1.15);
           }
         }
@@ -218,6 +225,8 @@ body > section{
 
 /*ACERCA*/
 .Información{
+  font-family: "Averia Serif Libre", serif;
+  color: white;
   display: grid;
   text-align: left;
   align-items: center;
@@ -233,7 +242,17 @@ body > section{
   }
 
 }  
+
+.Documentación{
+  text-align: left;
+  margin: 10px;
+  font-family: "Averia Serif Libre", serif;
+  color: #841a16;
+}
+
 .Datos{
+  font-family: "Averia Serif Libre", serif;
+  color: #841a16;
   display: grid;
   width: 75%;
   text-align: left;
@@ -403,12 +422,13 @@ body > section{
     display: grid;
     border: 2px solid #bc707a;
     border-radius: 10px;
+
     > h3 {
       margin: 5px
     }
 
     > a > img {
-      width: 50%; /*35%*/
+      width: 50%; 
     }
 
     > p{
@@ -553,6 +573,40 @@ body > section{
     border: 2px solid #841a16;
     border-radius: 10px;
     display: grid;
+
+    > div {
+      > input {
+        width: 80%;
+        margin: 10px 10px;
+        padding: 4px 8px;
+        border: white;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      > button{
+        margin: 10px 10px;
+        padding: 4px 8px;
+        border: white;
+        border-radius: 5px;
+        background-color: white;
+      }
+    }
+
+    .etiquetas{
+      background-color: white;
+      margin: 10px;
+      border: white;
+      border-radius: 5px;
+
+      > ul > li > button {
+        color: white;
+        padding: 2px 4px;
+        border: #841a16;
+        border-radius: 5px;
+        background-color: #841a16;
+      }
+    }
 
     > textarea{
       margin: 10px 10px;
@@ -721,6 +775,7 @@ body > section{
             display:inline-block;
             width:calc( 50% - 1em );
             margin:.5em;
+
         }
     }
   }
@@ -756,6 +811,29 @@ body > section{
       > section {
         display: grid;
       }
+    }
+  }
+
+  .Nueva{
+    > section > form{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 10px;
+    }
+
+    .Nueva_Receta{
+      grid-column: span 1;
+    }
+
+    .Fotos{
+      display: grid;
+      align-self: start;
+      grid-column: span 2;
+    }
+
+    .Añadir_Receta{
+      grid-column: span 3;
+      justify-content: center;
     }
   }
 }
@@ -806,6 +884,8 @@ body > section{
       margin: 0;
     }
   }
+
+
 
   .Formulario{
     width: 50%;
