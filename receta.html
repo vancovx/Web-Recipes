@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-  <html lang="en">
+  <html lang="es">
     <head>
       <title>Sugar Vault</title>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Evitar que se redimensione en moviles-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <link rel="stylesheet" type="text/css" href="styles/style1.css">
       <link rel="stylesheet" href="css/fontello.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,10 @@
         </div>
       </header>
 
-      <!-- Barra de navegacion fuera del header-->
       <nav>
-        <input type="checkbox" id = chkMenu> <!--Lo usamos para ocultar la barra de navegación-->
-        <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> <!--Relaciona el campo con el imput, como si estuviera pulsando el imput-->
+        <input type="checkbox" id = chkMenu>
+        <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> 
         <ul>
-          <!--List item-->
-          <!-- li*6>a[href="Paginas$.html"]{Página$}-->
           <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
           <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
           <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
@@ -39,16 +36,16 @@
 
       <section>
         <h3 class="Secciones Gofres"> Gofres con fresas </h3>
-        <h4 class="Inf_Receta"> 
+        <div class="Inf_Receta">
               <span class="icon-users"></span><p> 4 personas</p>
               <span class="icon-star"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span><p> Dificultad</p>
               <span class="icon-clock"></span><p> 45 min</p>
-        </h4>
-        <h5 class="Autor">
+        </div>
+        <div class="Autor">
           <p> Receta de <a href="buscar.html"> usuario 1</a>.</p>
           <p> Publicada el <time datetime="2024-03-24"> 7 de marzo de 2024 </time></p>
-        </h5>
-        
+        </div>
+  
         <div class="Receta">
             <section>
                 <h3 class="Secciones"> Fotos </h3>
@@ -56,7 +53,7 @@
                 <p class="Descripción"> Sumérgete en el dulce placer de nuestros gofres con fresas.</p>
 
                 <div>
-                  <button> < </button>
+                  <button> &lt; </button>
                   <p> Foto: 1/3</p>
                   <button> > </button>
                 </div>

@@ -3,7 +3,7 @@
     <head>
       <title>Sugar Vault</title>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Evitar que se redimensione en moviles-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <link rel="stylesheet" type="text/css" href="styles/style1.css">
       <link rel="stylesheet" href="css/fontello.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,11 @@
         </div>
       </header>
 
-      <!-- Barra de navegacion fuera del header-->
+
       <nav>
-        <input type="checkbox" id = chkMenu> <!--Lo usamos para ocultar la barra de navegación-->
-        <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> <!--Relaciona el campo con el imput, como si estuviera pulsando el imput-->
+        <input type="checkbox" id = chkMenu> 
+        <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> 
         <ul>
-          <!--List item-->
-          <!-- li*6>a[href="Paginas$.html"]{Página$}-->
           <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
           <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
           <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
@@ -38,7 +36,7 @@
       </nav>
 
       <section class="Acerca">
-        <h3 class="Secciones"> Información sobre la practica </h3>
+        <h3 class="Secciones"> Información sobre la práctica </h3>
         <div>
           <div class="Información">
             <p> Asignatura:  </p>
@@ -77,8 +75,11 @@
       </section>
 
       <section>
-        <h3 class="Secciones"> Documentación de la practica </h3>
-        <p></p>
+        <h3 class="Secciones"> Documentación de la práctica </h3>
+        <p class="Documentación"> La practica ha sido desarrollada principalmente para el navegador chrome. Está Página Web cumple el diseño responsive basado en la técnica Mobile First. 
+          Por debajo de 500px las opciones del navegador quedan ocultas y se muestran al pulsar el botón de Menú como un menú despegable.
+          Por encima de 500px y hasta 900px en la barra de navegación solo se muestran los iconos asociados. A partir de los 900px la barra de navegación se muestra al completo.
+          Todos los demás puntos se han completado siguiendo el enunciado de la práctica por lo que haciendo un autoevaluación se calcula que la nota debería rondar el 10 <span class="icon-star"></span></p>
       </section>
 
       <footer class = "Pie">
