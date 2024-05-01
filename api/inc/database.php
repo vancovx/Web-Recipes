@@ -9,8 +9,8 @@ class Database{
     // private $HOST     = "localhost"; // si no funciona con $HOST="127.0.0.1", probar con éste.
     private $HOST              = "127.0.0.1";
     private $DB_DATABASE_NAME  = "recetas";
-    private $DB_USERNAME       = "pcw";
-    private $DB_PASSWORD       = "pcw";
+    private $DB_USERNAME       = "root";
+    private $DB_PASSWORD       = "";
     public  $conn;
 
     // =================================================================================
