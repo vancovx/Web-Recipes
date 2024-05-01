@@ -10,9 +10,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+      <script src="js/script2.js"></script>
     </head>
 
-    <body>
+    <body onload="verificarLogin()">
       <header>
         <a href="index.html"><img src="img/logo_oso.png" alt="Logo"></a>
         <div class="titulos">
@@ -38,11 +39,12 @@
       <section>
         <h3 class="Secciones">Iniciar Sesión</h3>
         <div class="Formulario">
-          <form>
+          <form onsubmit="hacerLogin(event)">
             <label for="usu"> *Usuario:</label>
-            <input type="text" name="usuario" id="usu" required autofocus>
-            <label for="pass"> *Contraseña:</label>
-            <input type="password" name="contraseña" id="pass" required>
+            <input type="text" name="usu" id="usu" required autofocus> <!--Pasamos los parametros name-->
+            <label for="pwd"> *Contraseña:</label>
+            <input type="password" name="pwd" id="pwd" required> <!--Pasamos los parametros name-->
+ 
             <div>
               <input type="reset" value="Borrar">
               <input type="submit" value="Entrar">
