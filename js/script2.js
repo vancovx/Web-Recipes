@@ -45,21 +45,49 @@ function hacerLogin(evt){
         let r = xhr.response;
         console.log(r);
         if(r.RESULTADO == 'OK'){
+            //Guardar la informacion del usuario
             sessionStorage['datosUsu'] = JSON.stringify(r);
+            //Mostramos modal
+            showmModal();
+            //Redirigimos a la pagina index
+            window.location.href = 'index.html'; 
+            
+        }else{
+            showModal("ERROR EN EL LOGIN: Usuario o Password incorrectos.");
         }
     }
     
     xhr.send(fd);
 }
 
+
+function showModal(message) {
+    const modal = document.getElementById('errorModal');
+    const span = document.getElementsByClassName("close")[0];
+    document.getElementById('errorMessage').textContent = message;
+
+    modal.style.display = "block";
+    span.onclick = function() {
+        modal.style.display = "none";
+        document.getElementById("usu").focus();
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("usu").focus();
+        }
+    }
+}
+
+/*
 function mostrarModal(modalId, lastLoginDate) {
     const modal = document.getElementById(modalId);
-    modal.showModal();
+    modal.style.display = block;
     console.log(modalId);
     console.log(lastLoginDate);
 
     //aniado la fecha al modal
-    document.getElementById('fecha_ultimo_inicio').innerHTML = <p id="fecha_ultimo_inicio">Último inicio de sesión: ${lastLoginDate}</p>
+    document.getElementById('fecha_ultimo_inicio').innerHTML = `<p id="fecha_ultimo_inicio">Último inicio de sesión: ${lastLoginDate}</p>`;
 
     if (modalId == 'errorModal') {
         modal.style.display = "block";
@@ -88,4 +116,6 @@ function mostrarModal(modalId, lastLoginDate) {
         });
     }
 
-}
+}*/
+
+

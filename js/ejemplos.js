@@ -1,3 +1,4 @@
+
 function mostrarMenu(){
     let ul = document.querySelector('#menu'),
         pagina = document.body.getAttribute('data-pagina'),
@@ -11,7 +12,7 @@ function mostrarMenu(){
             html += '<li><a href = "./buscar.html">Buscar<a/></li>';
         }
 
-        //location.href = 'login.html'; //para hacer logout
+        //location.href = 'login.html'; //Para hacer logout
         if (sessionStorage['datos_usuario']){
             html += '<li><a href="./"onclick="hacerLogout(event);">Logout</a></li>';
 

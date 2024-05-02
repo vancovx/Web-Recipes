@@ -1,3 +1,45 @@
+//TODO: COMPORBAR QUE FUNCIONA CUANDO ALGUIEN ESTA LOGUEADO
+function mostrarMenu(){
+    let ul = document.querySelector('#menu'),
+        pagina = document.body.getAttribute('data-pagina'),
+        html = '';
+        
+        if (pagina != 'index'){
+            html += '<li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>';
+        }
+
+        if (pagina != 'buscar'){
+            html += '<li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>';
+        }
+
+        if (pagina != 'login'){
+            html += '<li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>';
+        }
+
+        if (pagina != 'registro'){
+            html += '<li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>';
+        }
+
+        //location.href = 'login.html'; //Para hacer logout
+        if (sessionStorage['datos_usuario']){
+            html += '<li><a href="./"onclick="hacerLogout(event);">Logout</a></li>';
+
+            if (pagina != 'nueva'){
+                html += '<li><a href = "./nueva.html">Nueva<a/></li>';
+            }
+            else{
+                if (pagina != 'login'){
+                    html += '<li><a href = "./login.html">Login<a/></li>';
+                }
+
+                if (pagina != 'registro'){
+                    html += '<li><a href = "./registro.html">Registro<a/></li>';
+                }
+            }
+        }
+        ul.innerHTML = html;
+}
+
 function pedirReceta() {
     let url = 'api/recetas',  //Declaramos ruta de la api
         xhr = new XMLHttpRequest();  //Creamos el objeto para hacer peticiones
@@ -121,3 +163,4 @@ function actualizarPie(numRecetas) {
 
     
 }
+

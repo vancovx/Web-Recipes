@@ -13,7 +13,7 @@
       <script src="js/script2.js"></script>
     </head>
 
-    <body onload="verificarLogin()">
+    <body> <!--onload="verificarLogin()"-->
       <header>
         <a href="index.html"><img src="img/logo_oso.png" alt="Logo"></a>
         <div class="titulos">
@@ -47,9 +47,15 @@
  
             <div>
               <input type="reset" value="Borrar">
-              <input type="submit" value="Entrar">
+              <input type="submit" value="Entrar" >
             </div>
            </form> 
+           <div id="errorModal" class="modal" style="display:none;">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="errorMessage"></p>
+            </div>
+          </div>
         </div>
 
         <p class="Ir">No tengo cuenta. Ir a <a href="registro.html"> Registro</a>.</p>
