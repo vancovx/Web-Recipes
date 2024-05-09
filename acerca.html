@@ -10,6 +10,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+      <script src="js/navbar.js"></script>
     </head>
 
     <body>
@@ -25,14 +26,7 @@
       <nav>
         <input type="checkbox" id = chkMenu> 
         <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> 
-        <ul>
-          <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
-          <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
-          <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
-          <li><a href="index.html"><span class="icon-logout"></span><span>Logout</span></a></li>
-          <li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>
-          <li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>
-        </ul> 
+        <ul id ="menu"></ul> 
       </nav>
 
       <section class="Acerca">
@@ -42,13 +36,13 @@
             <p> Asignatura:  </p>
             <p> Titulación: </p>
             <p> Año académico: </p>
-            <p> Práctica 1: </p>
+            <p> Práctica 2: </p>
           </div>
           <div class="Datos">
             <p> Programación del Cliente Web (PCW)</p> 
             <p> Ingeniería Multimedia</p> 
             <p> 2023/2024</p> 
-            <p> HTML y CSS</p> 
+            <p> JavaScript</p> 
           </div>
         </div>
       </section>
@@ -76,16 +70,18 @@
 
       <section>
         <h3 class="Secciones"> Documentación de la práctica </h3>
-        <p class="Documentación"> La practica ha sido desarrollada principalmente para el navegador chrome. Está Página Web cumple el diseño responsive basado en la técnica Mobile First. 
-          Por debajo de 500px las opciones del navegador quedan ocultas y se muestran al pulsar el botón de Menú como un menú despegable.
-          Por encima de 500px y hasta 900px en la barra de navegación solo se muestran los iconos asociados. A partir de los 900px la barra de navegación se muestra al completo.
-          Todos los demás puntos se han completado siguiendo el enunciado de la práctica por lo que haciendo un autoevaluación se calcula que la nota debería rondar el 10 <span class="icon-star"></span></p>
+        <p class="Documentación"> En esta segunda practica se han implementado las funcionalidades de todas las páginas excepto de la página Nueva Receta. En la página Receta faltan algunas funcionalidades como la de los comentarios y el carrusel, por lo demás esta todo implementado. La nota esperada de la practica es un 6 <span class="icon-star"></span></p>
       </section>
 
       <footer class = "Pie">
-        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
-        <p> Práctica 1</p>
+        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 5 de mayo de 2024</time></p>
+        <p> Práctica 2</p>
       </footer>
+
+      <script>
+        mostrarMenu();
+        comprobarLogin();
+      </script>
 
     </body>
   </html>

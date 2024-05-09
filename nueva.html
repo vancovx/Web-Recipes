@@ -10,6 +10,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+      <script src="js/navbar.js"></script>
     </head>
 
   <body>
@@ -25,14 +26,7 @@
     <nav>
       <input type="checkbox" id="chkMenu">
       <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label>
-      <ul>
-        <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
-        <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
-        <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
-        <li><a href="index.html"><span class="icon-logout"></span><span>Logout</span></a></li>
-        <li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>
-        <li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>
-      </ul>
+      <ul id ="menu"></ul>
     </nav>
 
     <div class="Nueva">
@@ -107,9 +101,14 @@
     </div>
 
     <footer class="Pie">
-      <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
-      <p>Práctica 1</p>
+      <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 5 de mayo de 2024</time></p>
+      <p>Práctica 2</p>
     </footer>
+
+    <script>
+      mostrarMenu();
+      comprobarLogin();
+    </script>
   </body>
 
 </html>

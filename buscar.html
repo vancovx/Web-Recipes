@@ -10,6 +10,8 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+      <script src="js/navbar.js"></script>
+      <script src="js/script4.js"></script>
     </head>
 
     <body>
@@ -25,29 +27,25 @@
       <nav>
         <input type="checkbox" id="chkMenu">
         <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label>
-        <ul>
-          <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
-          <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
-          <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
-          <li><a href="index.html"><span class="icon-logout"></span><span>Logout</span></a></li>
-          <li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>
-          <li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>
-        </ul>
+        <ul id ="menu"></ul> 
       </nav>
 
       <div class="Buscar">
         <section class="Filtro">
           <h3 class="Secciones">Filtro de búsqueda</h3>
           <div>
-            <form>
-              <label for="cont"> Contiene:</label>
-              <input type="text" name="usuario" id="cont" placeholder="autor, texto..." autofocus>
+            <form onsubmit="buscarReceta(event)">
+              <label for="autor"> Autor:</label>
+              <input type="text" name="autor" id="autor" placeholder="autor" autofocus>
+              <label for="cont"> Nombre:</label>
+              <input type="text" name="cont" id="cont" placeholder="texto" >
               <label for="ingre"> Ingredientes:</label>
-              <input type="text" name="usuario" id="ingre" placeholder="fresas, arandanos...">
+              <input type="text" name="ingre" id="ingre" placeholder="fresas, arandanos...">
               <label for="eti"> Etiquetas:</label>
-              <input type="text" name="usuario" id="eti" placeholder="gofres, dulce...">
-              <label for="lista"> Dificultad:</label>
-                <select id="lista" name="dificultad">
+              <input type="text" name="eti" id="eti" placeholder="gofres, dulce...">
+              <label for="dificultad"> Dificultad:</label>
+                <select id="dificultad" name="dificultad">
+                  <option value="Cualquiera>">Cualquiera</option>
                   <option value="Baja"> Baja</option>
                   <option value="Media"> Media</option>
                   <option value="Alta"> Alta</option>
@@ -61,96 +59,17 @@
         </section>
         <section class="Resultado">
           <h3 class="Secciones">Resultado de la búsqueda</h3>
-          <div>
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-
-            <article>
-              <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-              <a href="receta.html">
-                <h4>Gofres con fresas</h4>
-              </a>
-              <footer>
-                <span class="icon-users"></span><span> 4 personas</span>
-                <span class="icon-star"></span><span class="icon-star-empty"></span><span
-                  class="icon-star-empty"></span><span> Dificultad</span>
-                <span class="icon-clock"></span><span> 45 min</span>
-              </footer>
-            </article>
-          </div>
-
-          <footer class="FinalSeccion">
-            <p>Mostrando 6 resultados de 36</p>
-            <button>Mostrar más</button>
-          </footer>
+          <div id="recetas"></div>
         </section>
       </div>
 
       <footer class="Pie">
-        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
-        <p>Práctica 1</p>
+        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 5 de mayo de 2024</time></p>
+        <p>Práctica 2</p>
       </footer>
+      <script>
+        mostrarMenu();
+        comprobarLogin();
+      </script>
     </body>
 </html>

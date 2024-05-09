@@ -10,6 +10,8 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+      <script src="js/navbar.js"></script>
+      <script src="js/script5.js"></script>
     </head>
 
     <body>
@@ -24,14 +26,7 @@
       <nav>
         <input type="checkbox" id = chkMenu>
         <label for="chkMenu"><span class="icon-menu-1"></span><span>Menú</span></label> 
-        <ul>
-          <li><a href="index.html"><span class="icon-home"></span><span>Inicio</span></a></li>
-          <li><a href="buscar.html"><span class="icon-search"></span><span>Buscar</span></a></li>
-          <li><a href="nueva.html"><span class="icon-doc-new"></span><span>Nueva Receta</span></a></li>
-          <li><a href="index.html"><span class="icon-logout"></span><span>Logout</span></a></li>
-          <li><a href="login.html"><span class="icon-login"></span><span>Login</span></a></li>
-          <li><a href="registro.html"><span class="icon-user-plus"></span><span>Registro</span></a></li>
-        </ul> 
+        <ul id ="menu"></ul> 
       </nav>
 
       <section>
@@ -47,53 +42,29 @@
         </div>
   
         <div class="Receta">
-            <section>
-                <h3 class="Secciones"> Fotos </h3>
-                <a href="receta.html"><img src="img/fresas.jpeg" alt="Foto"></a>
-                <p class="Descripción"> Sumérgete en el dulce placer de nuestros gofres con fresas.</p>
-
+            <section id="fotos">
+              <h3 class="Secciones"> Fotos </h3>
                 <div>
                   <button> &lt; </button>
-                  <p> Foto: 1/3</p>
                   <button> > </button>
                 </div>
             </section>
 
             <div>
-                <section>
-                    <h3 class="Secciones"> Etiquetas </h3>
-                    <a href="buscar.html"> Gofres </a>
-                    <a href="buscar.html"> Fresas </a>
+                <section id="etiquetas">
+                  <h3 class="Secciones"> Etiquetas </h3>
                 </section>
-
-                <section>
-                    <h3 class="Secciones"> Ingredientes </h3>
-                    <ul>
-                      <li> 2 tazas de harina de trigo </li>
-                      <li> 2 cucharadas de azúcar </li>
-                      <li> 1/2 cucharadita de sal </li>
-                      <li> 2 huevos </li>
-                      <li> 3/4 tazas de leche </li>
-                      <li> 1/2 taza de mantequilla derretida </li>
-                      <li> Fresas frescas, lavadas y cortadas en rodajas </li>
-                      <li> Azúcar en polvo (opcional, para decorar) </li>
-                      <li> Crema batida (opcional, para servir) </li>
-                      <li> Sirope de arce o miel (opcional, para servir) </li>
-                    </ul>
+                <section id="ingredientes">
+                  <h3 class="Secciones"> Ingredientes </h3>
                 </section>
-
             </div>
 
-            <section>
-                <h3 class="Secciones"> Elaboración </h3>
-                <p> En un tazón grande, tamiza la harina, el polvo de hornear, el bicarbonato de sodio y la sal. Mezcla bien y reserva. En otro tazón grande, bate los huevos hasta que estén bien batidos. Agrega la leche, la mantequilla derretida y el extracto de vainilla. Mezcla hasta que esté todo bien incorporado. Agrega la mezcla de ingredientes secos al tazón de ingredientes húmedos y mezcla hasta obtener una masa homogénea. No mezcles en exceso para evitar que los gofres queden duros. </p>
-                <p> Precalienta tu máquina de gofres según las instrucciones del fabricante. Una vez que la máquina esté caliente, rocía con un poco de aceite antiadherente o unta con un poco de mantequilla derretida. Vierte aproximadamente 1/2 taza de masa en el centro de la plancha caliente y cierra la tapa. Cocina los gofres según las instrucciones de tu máquina, generalmente durante unos 4-5 minutos o hasta que estén dorados y crujientes.</p> 
-                <p> Mientras se cocinan los gofres, lava y corta las fresas en rodajas finas. Si lo deseas, puedes espolvorear un poco de azúcar sobre las fresas para endulzarlas ligeramente y dejarlas reposar durante unos minutos para que liberen sus jugos naturales.</p>
-                <p> Una vez listos, retira los gofres de la máquina y sírvelos en platos individuales. Coloca las rodajas de fresa sobre los gofres, distribuyéndolas uniformemente. Si lo deseas, espolvorea un poco de azúcar en polvo sobre los gofres y las fresas. Sirve los gofres con fresas acompañados de crema batida y sirope de arce, si lo deseas.</p>  
+            <section id="elaboracion">
+              <h3 class="Secciones"> Elaboración </h3>
             </section>
 
             <section>
-                <h3 class="Secciones"> Comentarios (3) </h3>
+                <h3 class="Secciones"> Comentarios</h3>
                 <p class="Comentario"> Para poder dejar un comentario necesitas hacer <a href="login.html">login</a>.</p>
                 <form>
                   <label for="titulo"> Deja tu comentario:</label>
@@ -104,34 +75,7 @@
                     <input type="submit" value="Enviar">
                   </div>
                 </form>
-                <div class="Comentarios">
-                  <article>
-                    <h4> Delicia matutina </h4>
-                    <p>¡Los gofres con fresas son una delicia absoluta!.¡Definitivamente una receta que siempre alegra mis mañanas!</p>
-                    <footer>
-                      <p> <time datetime="2024-01-26 11:36"> 26/enero/2024, 11:36h </time></p>
-                      <p> por <a href="buscar.html"> usuario2 </a></p>
-                    </footer>
-                  </article>
-
-                  <article>
-                    <h4> Sabor y Frescura en Cada Bocado</h4>
-                    <p> Los gofres crujientes junto con la suavidad de las fresas crean una experiencia culinaria inolvidable.</p>
-                    <footer>
-                      <p> <time datetime="2024-01-26 11:36"> 26/enero/2024, 11:36h </time></p>
-                      <p> por <a href="buscar.html"> usuario3 </a></p>
-                    </footer>
-                  </article>
-
-                  <article>
-                    <h4> Gran aportación</h4>
-                    <p>La dulzura natural de las fresas complementa a la perfección la textura esponjosa de los gofres. ¡Una receta que definitivamente repetiré una y otra vez!</p>
-                    <footer>
-                      <p> <time datetime="2024-01-26 11:36"> 26/enero/2024, 11:36h </time></p>
-                      <p> por <a href="buscar.html"> usuario4 </a></p>
-                    </footer>
-                  </article>
-                </div>
+                <div class="Comentarios" id="comentarios"></div>
             </section>
 
         </div>
@@ -139,9 +83,15 @@
       </section>
 
       <footer class = "Pie">
-        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 10 de marzo de 2024</time></p>
-        <p> Práctica 1</p>
+        <p>© <a href="acerca.html">Vanessa Covrig</a> <time datetime="2024-03-10"> 5 de mayo de 2024</time></p>
+        <p> Práctica 2</p>
       </footer>
+
+      <script>
+        mostrarMenu();
+        comprobarLogin();
+        mostrarReceta();
+      </script>
 
     </body>
   </html>
