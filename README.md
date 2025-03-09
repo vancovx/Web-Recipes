@@ -1,7 +1,5 @@
 # 🍰 Web Recipes
 
-Página web de recetas creada para ofrecer a los usuarios una experiencia culinaria atractiva y fácil de usar. 
-
 ## 🎨 Características
 
 - **Diseño Atractivo**: Interfaz en tonos rosas.
@@ -25,12 +23,12 @@ git clone https://github.com/vancovx/Web-Recipes.git
 cd Web-Recipes
 ````
 
-###2️⃣ Configurar la Base de Datos
+### 2️⃣ Configurar la Base de Datos
 Importa el archivo recetas.sql en tu gestor de bases de datos MySQL para crear las tablas necesarias.
 
-###3️⃣ Configurar el Servidor
+### 3️⃣ Configurar el Servidor
 Asegúrate de tener un servidor web (como Apache) con soporte para PHP y MySQL.
 Coloca los archivos del proyecto en el directorio raíz de tu servidor web.
 
-###4️⃣ Acceder a la Aplicación
+### 4️⃣ Acceder a la Aplicación
 Abre tu navegador y navega a http://localhost/Web-Recipes para la página principal.
