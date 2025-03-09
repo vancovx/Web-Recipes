@@ -15,7 +15,7 @@ Página web de recetas creada para ofrecer a los usuarios una experiencia culina
 - **Base de Datos**: MySQL (archivo `recetas.sql`)
 
 ## 📸 Captura de Pantalla
-![Imagen inicial](/img/previsualizacion.png)
+![Imagen inicial](/img/recetas.png)
 
 ## 🚀 Cómo Empezar
 ### 1️⃣ Clonar el Repositorio
