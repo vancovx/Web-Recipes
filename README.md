@@ -6,6 +6,7 @@
 - **Backend**: PHP
 - **Base de Datos**: MySQL (archivo `recetas.sql`)
 
+## Captura de la Web
 ![Imagen inicial](/img/recetas.png)
 
 ## Cómo Empezar
@@ -25,3 +26,6 @@ Coloca los archivos del proyecto en el directorio raíz de tu servidor web.
 
 ### 4️⃣ Acceder a la Aplicación
 Abre tu navegador y navega a http://localhost/Web-Recipes para la página principal.
+
+## Contacto
+Vanessa Covrig - vanessacovrig7@gmail.com
