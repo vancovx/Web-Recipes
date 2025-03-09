@@ -1,21 +1,14 @@
 # 🍰 Web Recipes
 
-## 🎨 Características
-
-- **Diseño Atractivo**: Interfaz en tonos rosas.
-- **Gestión de Recetas**: Permite agregar, buscar y visualizar recetas detalladas.
-- **Autenticación de Usuarios**: Funcionalidad de registro e inicio de sesión para una experiencia personalizada.
-
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: PHP
 - **Base de Datos**: MySQL (archivo `recetas.sql`)
 
-## 📸 Captura de Pantalla
 ![Imagen inicial](/img/recetas.png)
 
-## 🚀 Cómo Empezar
+## Cómo Empezar
 ### 1️⃣ Clonar el Repositorio
 
 ```sh
